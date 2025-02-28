@@ -1,0 +1,30 @@
+body {
+    background-color: #ffffff;
+    color: #343a40;
+}
+
+.card {
+    transition: transform 0.2s;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+h1 {
+    color: #343a40;
+}
+
+.navbar {
+    background-color: #f8f9fa;
+}
+
+footer {
+    background-color: #f8f9fa;
+}
+
+@media (max-width: 767.98px) {
+    .create-button {
+        margin-top: 1rem;
+    }
+} 

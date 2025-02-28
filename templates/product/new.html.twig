@@ -1,0 +1,62 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}New Product{% endblock %}
+
+{% block body %}
+    <div class="row">
+        <div class="col-md-8 offset-md-2">
+            <h1 class="mb-4">Create New Product</h1>
+
+            {{ form_start(form, {'attr': {'class': 'needs-validation', 'novalidate': 'novalidate', 'enctype': 'multipart/form-data'}}) }}
+                <p class="text-muted mb-3">Fields marked with * are required</p>
+                <div class="mb-3">
+                    {{ form_label(form.title, null, {'label_attr': {'class': 'required-field-label'}}) }}
+                    {{ form_widget(form.title) }}
+                    <div class="invalid-feedback d-block">
+                        {{ form_errors(form.title) }}
+                    </div>
+                </div>
+
+                <div class="mb-3">
+                    {{ form_label(form.description, null, {'label_attr': {'class': 'required-field-label'}}) }}
+                    {{ form_widget(form.description) }}
+                    <div class="invalid-feedback d-block">
+                        {{ form_errors(form.description) }}
+                    </div>
+                </div>
+
+                <div class="mb-3">
+                    {{ form_label(form.priceExclVat, null, {'label_attr': {'class': 'required-field-label'}}) }}
+                    {{ form_widget(form.priceExclVat) }}
+                    <div class="invalid-feedback d-block">
+                        {{ form_errors(form.priceExclVat) }}
+                    </div>
+                </div>
+
+                <div class="mb-3">
+                    {{ form_label(form.category, null, {'label_attr': {'class': 'required-field-label'}}) }}
+                    {{ form_widget(form.category) }}
+                    <div class="invalid-feedback d-block">
+                        {{ form_errors(form.category) }}
+                    </div>
+                </div>
+
+                <div class="mb-3">
+                    {{ form_label(form.imageFile) }}
+                    {{ form_widget(form.imageFile) }}
+                    <div class="invalid-feedback d-block">
+                        {{ form_errors(form.imageFile) }}
+                    </div>
+                    <small class="form-text text-muted">
+                        Allowed formats: JPEG, PNG. Maximum size: 1MB
+                    </small>
+                </div>
+
+                <div class="mb-3">
+                    <button type="submit" class="btn btn-primary">Create Product</button>
+                    <a href="{{ path('app_product_index') }}" class="btn btn-secondary">Back to list</a>
+                </div>
+            {{ form_end(form) }}
+        </div>
+    </div>
+{% endblock %} 
