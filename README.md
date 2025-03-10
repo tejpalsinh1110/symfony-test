@@ -26,8 +26,8 @@ A simple e-commerce application built with Symfony 6.4, featuring product manage
 
 1. Clone the repository
 ```bash
-git clone <repository-url>
-cd <project-directory>
+git clone https://github.com/tejpalsinh1110/symfony-test
+cd symfony-test
 ```
 
 2. Install dependencies
